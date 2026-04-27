@@ -10,7 +10,7 @@ def load_data():
     season_map = {1: 'Musim Semi', 2: 'Musim Panas', 3: 'Musim Gugur', 4: 'Musim Dingin'}
     df['season'] = df['season'].map(season_map)
     df['yr'] = df['yr'].map({0: '2011', 1: '2012'})
-    month_order = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+    month_order = ['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des']
     df['mnth'] = pd.Categorical(df['mnth'], categories=month_order, ordered=True)
     return df, month_order
 
