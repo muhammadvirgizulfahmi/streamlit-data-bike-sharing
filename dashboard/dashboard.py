@@ -7,6 +7,7 @@ st.set_page_config(page_title="Bike Sharing Dashboard", layout="wide")
 @st.cache_data
 def load_data():
     df = pd.read_csv("dashboard/main_data.csv")
+    df['yr'] = df['yr'].astype(str)
     month_order = ['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des']
     df['mnth'] = pd.Categorical(df['mnth'], categories=month_order, ordered=True)
     return df, month_order
